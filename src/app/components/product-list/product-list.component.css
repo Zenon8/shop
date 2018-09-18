@@ -1,0 +1,9 @@
+app-product {
+    background-color: cadetblue;
+    border: 1px solid #456783;
+    display: block;
+    float: left;
+    margin: 5px 10px;
+    padding: 7px 10px;
+    width: 300px;
+}
