@@ -1,4 +1,5 @@
 <h3>{{ name }}</h3>
-<p>${{ price }}</p>
-<p>{{ description }}</p>
-<button (click)="onBuy()">Buy</button>
+<div> <img [src]='getMainImageUrl()' [height]='getMainImageHeight()' /></div>
+<div ngClass='price'>${{ price }}</div>
+<div>{{ description }}</div>
+<button (click)="addToCart()">{{'add to cart' | uppercase}}</button>

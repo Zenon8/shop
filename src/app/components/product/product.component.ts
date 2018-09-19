@@ -24,10 +24,19 @@ export class ProductComponent implements OnInit {
     this.name = this.product.name;
     this.price = this.product.price;
     this.description = this.product.description;
+    this.images = this.product.images;
   }
 
-  onBuy() {
-    console.log(`$name was bought`);
+  addToCart() {
+    console.log(`${this.name} has been added to cart`);
+  }
+
+  getMainImageUrl(): string {
+    return this.images[0].url;
+  }
+
+  getMainImageHeight(): number {
+    return this.images[0].height;
   }
 
 }

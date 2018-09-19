@@ -1,0 +1,29 @@
+h3 {
+    /* color: #363636; */
+    margin: 10px 0;
+}
+
+div > img {
+    margin: 10px 0;
+}
+
+.price {
+ color: darkgreen;
+ font-size: 22px;
+ font-weight: bold;
+ margin: 10px 0;
+}
+
+button {
+    background-color: #04a827;
+    border-radius: 16px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 5px 80px;
+}
+
+button:hover {
+    background-color: #057727;
+}
