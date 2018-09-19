@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ImageModel } from '../../models/image-model';
 import { Category } from './category.enum';
 import { ProductModel } from '../../models/product-model';
@@ -17,6 +17,7 @@ export class ProductComponent implements OnInit {
   isAvailable: boolean;
   images: ImageModel[];
   @Input() product: ProductModel;
+  @Output() addToCart: EventEmitter<ProductModel> = new EventEmitter();
 
   constructor() { }
 
@@ -27,8 +28,8 @@ export class ProductComponent implements OnInit {
     this.images = this.product.images;
   }
 
-  addToCart() {
-    console.log(`${this.name} has been added to cart`);
+  onAddToCart() {
+    this.addToCart.emit(this.product);
   }
 
   getMainImageUrl(): string {
@@ -38,5 +39,4 @@ export class ProductComponent implements OnInit {
   getMainImageHeight(): number {
     return this.images[0].height;
   }
-
 }

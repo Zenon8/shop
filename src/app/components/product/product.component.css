@@ -19,11 +19,16 @@ button {
     border-radius: 16px;
     color: white;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.1rem;
     margin-bottom: 20px;
-    padding: 5px 80px;
+    padding: 5px 60px;
 }
 
 button:hover {
     background-color: #057727;
+}
+
+i {
+    
+    padding: 7px 2px;
 }
