@@ -1,7 +1,6 @@
-import { ProductModel } from '../models/product-model';
-import { Product } from '../models/product';
-import { ProductImage } from '../models/product-image';
+import { ProductModel } from '../models/product.model';
 import { Category } from '../components/product/category.enum';
+import { ImageModel } from '../models/image.model';
 
 
 export class ProductsService {
@@ -18,15 +17,14 @@ export class ProductsService {
     const height = 130;
 
     this.products = [
-      new Product('HP 250 G6', 500, '', Category.NOTEBOOK, [new ProductImage(hpImg, '', width, height)]),
-      new Product('Lenovo IdeaPad 320-15IKB ', 400, '', Category.NOTEBOOK, [new ProductImage(lenovoImg, '', width, height)]),
-      new Product('Samsung Galaxy Note 9', 1250, '', Category.PHONE, [new ProductImage(samsungImg, '', width, height)]),
-      new Product('Asus ZenPad 8.0', 250, '', Category.TABLET, [new ProductImage(asusImg, '', width, height)])
+      new ProductModel('HP 250 G6', 500, '', Category.NOTEBOOK, [new ImageModel(hpImg, width, height)]),
+      new ProductModel('Lenovo IdeaPad 320-15IKB ', 400, '', Category.NOTEBOOK, [new ImageModel(lenovoImg, width, height)]),
+      new ProductModel('Samsung Galaxy Note 9', 1250, '', Category.PHONE, [new ImageModel(samsungImg, width, height)]),
+      new ProductModel('Asus ZenPad 8.0', 250, '', Category.TABLET, [new ImageModel(asusImg, width, height)])
     ];
   }
 
   getProducts(): ProductModel[] {
-    // console.log(this.products);
     return this.products;
   }
 }

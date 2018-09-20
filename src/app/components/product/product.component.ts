@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ImageModel } from '../../models/image-model';
 import { Category } from './category.enum';
-import { ProductModel } from '../../models/product-model';
+import { ProductModel } from '../../models/product.model';
 
 @Component({
   selector: 'app-product',
