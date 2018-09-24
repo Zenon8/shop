@@ -1,34 +1,32 @@
 h3 {
-    /* color: #363636; */
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 div > img {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .price {
- color: darkgreen;
- font-size: 22px;
- font-weight: bold;
- margin: 10px 0;
+  color: darkgreen;
+  font-size: 4vh;
+  font-weight: bold;
+  margin: 10px 0;
 }
 
 button {
-    background-color: #04a827;
-    border-radius: 16px;
-    color: white;
-    cursor: pointer;
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    padding: 5px 60px;
+  background-color: #04a827;
+  border-radius: 16px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  padding: 5px 60px;
 }
 
 button:hover {
-    background-color: #057727;
+  background-color: #057727;
 }
 
 i {
-    
-    padding: 7px 2px;
+  padding: 7px 2px;
 }

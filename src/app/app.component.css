@@ -1,13 +1,13 @@
 app-product-list {
-    display: inline-block;
-    margin-top: 40px;
+  display: inline-block;
+  margin-top: 40px;
 }
 
 app-cart {
-    display: inline-block;
-    position: absolute;
-    top: 10px;
-    right: 80px;
-    text-align: center;
-    width: 170px;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: 80px;
+  text-align: center;
+  width: 170px;
 }

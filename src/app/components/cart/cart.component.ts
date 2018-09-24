@@ -1,8 +1,7 @@
-import { Component, OnInit, Input, OnDestroy } from '@angular/core';
-import { Router } from '@angular/router';
-import { ProductModel } from '../../models/product.model';
-import { CartService } from '../../services/cart.service';
-import { Subscription } from 'rxjs';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {ProductModel} from '../../models/product.model';
+import {CartService} from '../../services/cart.service';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-cart',
@@ -10,14 +9,15 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit, OnDestroy {
-  @Input()
+
   products: ProductModel[];
   addSubscription: Subscription;
 
-  constructor(private cartService: CartService, private router: Router) { }
+  constructor(private cartService: CartService) {
+  }
 
   ngOnInit() {
-    this.addSubscription = this.cartService.addEvent.subscribe(products => (this.products = products));
+    this.addSubscription = this.cartService.addProductEvent.subscribe(products => (this.products = products));
   }
 
   ngOnDestroy(): void {
@@ -27,8 +27,7 @@ export class CartComponent implements OnInit, OnDestroy {
   }
 
   onClick() {
-    console.log('asd qweq');
-    this.router.navigate(['/cart']);
+    this.cartService.openCartPopup();
   }
 
   getTotalAmount(): number {
@@ -38,10 +37,9 @@ export class CartComponent implements OnInit, OnDestroy {
   }
 
   applyStyle() {
-    if (this.products.length > 0) {
-      return { 'color': 'darkgreen', 'cursor': 'pointer' };
-    } else {
-      return { 'color': '#aaa' };
-    }
+    return {
+      'color': this.products.length > 0 ? 'darkgreen' : '#aaa',
+      'cursor': this.products.length > 0 ? 'pointer' : 'unset'
+    };
   }
 }
