@@ -32,12 +32,8 @@ export class CartPopupComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if (this.addSubscription) {
-      this.addSubscription.unsubscribe();
-    }
-    if (this.visibilitySubscription) {
-      this.visibilitySubscription.unsubscribe();
-    }
+    this.addSubscription.unsubscribe();
+    this.visibilitySubscription.unsubscribe();
   }
 
   getImageHeight(product: ProductModel): number {

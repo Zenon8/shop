@@ -21,9 +21,7 @@ export class CartComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if (this.addSubscription) {
-      this.addSubscription.unsubscribe();
-    }
+    this.addSubscription.unsubscribe();
   }
 
   onClick() {
@@ -31,9 +29,7 @@ export class CartComponent implements OnInit, OnDestroy {
   }
 
   getTotalAmount(): number {
-    return this.products
-      .map(p => p.price)
-      .reduce((acc, curr) => acc + curr);
+    return this.cartService.getTotalAmount();
   }
 
   applyStyle() {

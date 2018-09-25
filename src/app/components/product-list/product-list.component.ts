@@ -11,7 +11,6 @@ import { CartService } from '../../services/cart.service';
 export class ProductListComponent implements OnInit {
 
   products: ProductModel[];
-  @Output() addProductToCart: EventEmitter<ProductModel> = new EventEmitter();
 
   constructor(
     private productsService: ProductsService,

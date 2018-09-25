@@ -30,4 +30,10 @@ export class CartService {
       this.products.splice(index, 1);
     }
   }
+
+  getTotalAmount(): number {
+    return this.products
+      .map(p => p.price)
+      .reduce((acc, curr) => acc + curr);
+  }
 }
