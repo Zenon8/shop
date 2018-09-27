@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {ImageModel} from '../../models/image.model';
-import {Category} from './category.enum';
-import {ProductModel} from '../../models/product.model';
+import {ImageModel} from '../../core/image.model';
+import {Category} from '../../core/category.enum';
+import {ProductModel} from '../models/product.model';
 
 @Component({
   selector: 'app-product',
@@ -14,7 +14,6 @@ export class ProductComponent implements OnInit {
   description: string;
   price: number;
   category: Category;
-  isAvailable: boolean;
   images: ImageModel[];
   @Input() product: ProductModel;
   @Output() addToCart: EventEmitter<ProductModel> = new EventEmitter();
@@ -38,5 +37,9 @@ export class ProductComponent implements OnInit {
 
   getMainImageHeight(): number {
     return this.images[0].height;
+  }
+
+  isAvailable(): boolean {
+    return true;
   }
 }

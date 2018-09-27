@@ -1,6 +1,6 @@
-import { ProductModel } from '../models/product.model';
-import { Category } from '../components/product/category.enum';
-import { ImageModel } from '../models/image.model';
+import {ProductModel} from '../models/product.model';
+import {Category} from '../../core/category.enum';
+import {ImageModel} from '../../core/image.model';
 
 
 export class ProductsService {
@@ -17,10 +17,10 @@ export class ProductsService {
     const height = 130;
 
     this.products = [
-      new ProductModel('HP 250 G6', 500, '', Category.NOTEBOOK, [new ImageModel(hpImg, width, height)]),
-      new ProductModel('Lenovo IdeaPad 320-15IKB ', 400, '', Category.NOTEBOOK, [new ImageModel(lenovoImg, width, height)]),
-      new ProductModel('Samsung Galaxy Note 9', 1250, '', Category.PHONE, [new ImageModel(samsungImg, width, height)]),
-      new ProductModel('Asus ZenPad 8.0', 250, '', Category.TABLET, [new ImageModel(asusImg, width, height)])
+      new ProductModel('HP 250 G6', 500, [new ImageModel(hpImg, width, height)], 15, Category.NOTEBOOK),
+      new ProductModel('Lenovo IdeaPad 320-15IKB ', 400, [new ImageModel(lenovoImg, width, height)], undefined, Category.NOTEBOOK),
+      new ProductModel('Samsung Galaxy Note 9', 1250, [new ImageModel(samsungImg, width, height)], 10, Category.PHONE),
+      new ProductModel('Asus ZenPad 8.0', 250, [new ImageModel(asusImg, width, height)], 20, Category.TABLET)
     ];
   }
 

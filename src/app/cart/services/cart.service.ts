@@ -1,4 +1,4 @@
-import {ProductModel} from '../models/product.model';
+import {ProductModel} from '../../product/models/product.model';
 import {BehaviorSubject, Subject} from 'rxjs';
 
 export class CartService {

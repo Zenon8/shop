@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {CartService} from '../../services/cart.service';
+import {CartService} from '../services/cart.service';
 import {Subscription} from 'rxjs';
-import {ProductModel} from '../../models/product.model';
+import {ProductModel} from '../../product/models/product.model';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
