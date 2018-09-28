@@ -13,6 +13,7 @@ export class ProductComponent implements OnInit {
   name: string;
   description: string;
   price: number;
+  quantity: number;
   category: Category;
   images: ImageModel[];
   @Input() product: ProductModel;
@@ -23,6 +24,7 @@ export class ProductComponent implements OnInit {
   ngOnInit() {
     this.name = this.product.name;
     this.price = this.product.price;
+    this.quantity = this.product.quantity;
     this.description = this.product.description;
     this.images = this.product.images;
   }
