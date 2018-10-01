@@ -1,6 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {ProductModel} from '../../product/models/product.model';
-import {CartService} from '../services/cart.service';
+import {CartService} from '../../services/cart.service';
 import {Subscription} from 'rxjs';
 
 @Component({
@@ -10,14 +9,18 @@ import {Subscription} from 'rxjs';
 })
 export class CartComponent implements OnInit, OnDestroy {
 
-  products: ProductModel[];
+  totalAmount: number;
+  totalQuantity: number;
   addSubscription: Subscription;
 
   constructor(private cartService: CartService) {
   }
 
   ngOnInit() {
-    this.addSubscription = this.cartService.addProductEvent.subscribe(products => (this.products = products));
+    this.addSubscription = this.cartService.cartEvent.subscribe(() => {
+      this.totalAmount = this.cartService.getTotalAmount();
+      this.totalQuantity = this.cartService.getTotalQuantity();
+    });
   }
 
   ngOnDestroy(): void {
@@ -28,14 +31,10 @@ export class CartComponent implements OnInit, OnDestroy {
     this.cartService.openCartPopup();
   }
 
-  getTotalAmount(): number {
-    return this.cartService.getTotalAmount();
-  }
-
   applyStyle() {
     return {
-      'color': this.products.length > 0 ? 'darkgreen' : '#aaa',
-      'cursor': this.products.length > 0 ? 'pointer' : 'unset'
+      'color': this.totalQuantity > 0 ? 'darkgreen' : '#aaa',
+      'cursor': this.totalQuantity > 0 ? 'pointer' : 'unset'
     };
   }
 }

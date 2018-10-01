@@ -1,0 +1,7 @@
+<span>{{index + 1}}</span>
+<span>{{product.name}}</span>
+<span><img [src]='product.images[0].url' [height]='getImageHeight(product)'/></span>
+<span>{{product.quantity}}</span>
+<span>{{product.price | currency : 'USD' : 'symbol' : '1.0-0'}}</span>
+<span>{{getTotal() | currency : 'USD' : 'symbol' : '1.0-0'}}</span>
+<span ngClass='removeBtn'><i class='fa fa-times-circle' (click)='onClickRemove(product)'></i></span>

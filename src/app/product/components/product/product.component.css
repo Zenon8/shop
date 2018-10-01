@@ -27,6 +27,10 @@ button:hover {
   background-color: #057727;
 }
 
+button:disabled {
+  background-color: grey;
+}
+
 i {
   padding: 7px 2px;
 }

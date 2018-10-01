@@ -5,7 +5,7 @@ import {ImageModel} from '../../core/image.model';
 
 export class ProductsService {
 
-  private products: ProductModel[];
+  private readonly productList: ProductModel[];
 
   constructor() {
     const hpImg = 'https://i2.rozetka.ua/goods/4047041/copy_hp_250_g6_1xn74ea_5ace39c164ca6_images_4047041832.jpg';
@@ -16,15 +16,19 @@ export class ProductsService {
     const width = 130;
     const height = 130;
 
-    this.products = [
-      new ProductModel('HP 250 G6', 500, [new ImageModel(hpImg, width, height)], 15, Category.NOTEBOOK),
+    this.productList = [
+      new ProductModel('HP 250 G6', 500, [new ImageModel(hpImg, width, height)], 75, Category.NOTEBOOK),
       new ProductModel('Lenovo IdeaPad 320-15IKB ', 400, [new ImageModel(lenovoImg, width, height)], undefined, Category.NOTEBOOK),
-      new ProductModel('Samsung Galaxy Note 9', 1250, [new ImageModel(samsungImg, width, height)], 10, Category.PHONE),
-      new ProductModel('Asus ZenPad 8.0', 250, [new ImageModel(asusImg, width, height)], 20, Category.TABLET)
+      new ProductModel('Samsung Galaxy Note 9', 1250, [new ImageModel(samsungImg, width, height)], 100, Category.PHONE),
+      new ProductModel('Asus ZenPad 8.0', 250, [new ImageModel(asusImg, width, height)], 200, Category.TABLET)
     ];
   }
 
   getProducts(): ProductModel[] {
-    return this.products;
+    return this.productList;
+  }
+
+  subtract(product: ProductModel) {
+    this.productList.find(item => product.name === item.name).quantity--;
   }
 }

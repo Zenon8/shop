@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {CartService} from '../services/cart.service';
+import {CartService} from '../../services/cart.service';
 import {Subscription} from 'rxjs';
-import {ProductModel} from '../../product/models/product.model';
+import {ProductModel} from '../../../product/models/product.model';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
@@ -27,17 +27,13 @@ export class CartPopupComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.addSubscription = this.cartService.addProductEvent.subscribe(products => (this.products = products));
+    this.addSubscription = this.cartService.cartEvent.subscribe(products => (this.products = products));
     this.visibilitySubscription = this.cartService.visibilityCartPopupEvent.subscribe(s => this.state = s);
   }
 
   ngOnDestroy(): void {
     this.addSubscription.unsubscribe();
     this.visibilitySubscription.unsubscribe();
-  }
-
-  getImageHeight(product: ProductModel): number {
-    return product.images[0].height - 70;
   }
 
   onCheckout(event: Event) {
