@@ -5,6 +5,7 @@ export class CartService {
 
   cart: Array<ProductModel> = [];
   cartEvent: Subject<ProductModel[]> = new BehaviorSubject(this.cart);
+  removeEvent: Subject<ProductModel> = new Subject();
   state: 'shown' | 'hidden' = 'hidden';
   visibilityCartPopupEvent: Subject<'shown' | 'hidden'> = new BehaviorSubject(this.state);
 
@@ -24,8 +25,7 @@ export class CartService {
   addToCard(product: ProductModel) {
     const productInCart = this.cart.find(item => product.name === item.name);
     if (productInCart === undefined) {
-      const orderedProduct = product.clone();
-      orderedProduct.quantity = 1;
+      const orderedProduct = {...product, ...{quantity: 1}};
       this.cart.push(orderedProduct);
     } else {
       productInCart.quantity++;
@@ -43,6 +43,7 @@ export class CartService {
         this.cart.splice(index, 1);
       }
     }
+    this.removeEvent.next(product);
     this.cartEvent.next(this.cart);
   }
 

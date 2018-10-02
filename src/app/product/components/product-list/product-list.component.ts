@@ -23,6 +23,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.products = this.productsService.getProducts();
+    this.cartService.removeEvent.subscribe(pr => this.productsService.returnToList(pr));
   }
 
   ngAfterViewInit(): void {

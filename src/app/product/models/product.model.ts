@@ -12,15 +12,4 @@ export class ProductModel {
     public description?: string
   ) {
   }
-
-  clone(): ProductModel {
-    return new ProductModel(
-      this.name,
-      this.price,
-      this.images,
-      this.quantity,
-      this.category,
-      this.description
-    );
-  }
 }
