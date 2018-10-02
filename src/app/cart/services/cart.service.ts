@@ -1,6 +1,10 @@
 import {ProductModel} from '../../product/models/product.model';
 import {BehaviorSubject, Subject} from 'rxjs';
+import {Injectable} from '@angular/core';
 
+@Injectable({
+  providedIn: 'root'
+})
 export class CartService {
 
   cart: Array<ProductModel> = [];

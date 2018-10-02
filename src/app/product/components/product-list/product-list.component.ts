@@ -29,6 +29,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     this.productChildList.forEach(pr => console.log(pr));
   }
+
   onAddProductToCart(product: ProductModel) {
     this.productsService.subtract(product);
     this.cartService.addToCard(product);

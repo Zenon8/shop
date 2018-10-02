@@ -1,8 +1,11 @@
 import {ProductModel} from '../models/product.model';
 import {Category} from '../../core/category.enum';
 import {ImageModel} from '../../core/image.model';
+import {Injectable} from '@angular/core';
 
-
+@Injectable({
+  providedIn: 'root'
+})
 export class ProductsService {
 
   private readonly productList: ProductModel[];
