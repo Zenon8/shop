@@ -1,0 +1,9 @@
+app-cart-item, .cart-list-header, .cart-list-total {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 5fr 2fr 2fr 2fr 2fr 1fr;
+}
+
+.cart-list-header, .cart-list-total {
+  font-weight: bold;
+}

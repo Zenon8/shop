@@ -1,0 +1,10 @@
+<section (click)='onClosePopup($event)' [@visibilityChanged]='state'>
+  <div ngClass='content' (click)='$event.stopPropagation()'>
+    <h3>{{ 'shopping cart' | uppercase }}</h3>
+    <app-cart-list [products]="products"></app-cart-list>
+    <div ngClass='control'>
+      <button id='checkout' (click)='onCheckout($event)'>Checkout</button>
+      <button id='backToShop' (click)='onClosePopup($event)'>Back to shopping</button>
+    </div>
+  </div>
+</section>

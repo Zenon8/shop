@@ -1,0 +1,6 @@
+1. Divided all applications into modules.
+2. Implemented the possibility of adding goods to the Cart, if the goods are available.
+  If the product isn't available, the button 'Add to cart' isn't clickable.
+3. Cart displays the number of purchased goods and the total amount.
+4. Implemented the opportunity to change quantity of items in the cart or delete it.
+5. Stylized list of the basket, changing the background.

@@ -1,6 +1,0 @@
-<i [ngStyle]='applyStyle()' (click)='onClick()' class="fa fa-shopping-basket fa-4x" aria-hidden="true"></i>
-<div id='order-info' *ngIf='products.length > 0'>
-  <div>Ordered items: {{ products.length }}</div>
-  <div>Total amount: ${{ getTotalAmount() }}</div>
-</div>
-<app-cart-popup></app-cart-popup>

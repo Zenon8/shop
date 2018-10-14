@@ -5,13 +5,12 @@ import {RouterModule, Routes} from '@angular/router';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
 
 import {AppComponent} from './app.component';
-import {ProductComponent} from './components/product/product.component';
-import {ProductListComponent} from './components/product-list/product-list.component';
-import {ProductsService} from './services/products.service';
-import {CartComponent} from './components/cart/cart.component';
-import {CartService} from './services/cart.service';
-import {CartPopupComponent} from './components/cart-popup/cart-popup.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {CartModule} from './cart/cart.module';
+import {CoreModule} from './core/core.module';
+import {OrderModule} from './order/order.module';
+import {ProductModule} from './product/product.module';
+import {SharedModule} from './shared/shared.module';
 
 const appRoutes: Routes = [
   // {path: 'cart', component: CartPopupComponent}
@@ -19,22 +18,20 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ProductComponent,
-    ProductListComponent,
-    CartComponent,
-    CartPopupComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AngularFontAwesomeModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    CartModule,
+    CoreModule,
+    OrderModule,
+    ProductModule,
+    SharedModule
   ],
-  providers: [
-    ProductsService,
-    CartService
-  ],
+  providers: [],
   bootstrap: [
     AppComponent
   ]

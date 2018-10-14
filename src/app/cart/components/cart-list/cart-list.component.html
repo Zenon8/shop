@@ -1,0 +1,20 @@
+<div ngClass="cart-list-header">
+  <span></span>
+  <span>Name</span>
+  <span>Image</span>
+  <span>Quantity</span>
+  <span>Price</span>
+  <span>Total</span>
+  <span></span>
+</div>
+<app-cart-item *ngFor="let product of products; let i=index" [product]="product" [index]="i"
+               (removeEvent)="onRemoveItem($event)" appHighlight></app-cart-item>
+<div ngClass="cart-list-total">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span>{{totalQuantity}}</span>
+  <span></span>
+  <span>{{totalAmount | currency : 'USD' : 'symbol' : '1.0-0'}}</span>
+  <span></span>
+</div>
