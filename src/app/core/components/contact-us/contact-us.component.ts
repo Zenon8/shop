@@ -13,14 +13,23 @@ import {GENERATOR_9, GeneratorService, generatorServiceFactory} from '../../serv
   ]
 })
 export class ContactUsComponent implements OnInit {
+  randomLine: string;
 
-  constructor(@Optional() localStorageService: LocalStorageService,
-              @Optional() configService: ConfigOptionsService,
-              @Optional() constantsService: ConstantsService,
-              @Inject(GENERATOR_9) @Optional() generatorService: GeneratorService) {
+  constructor(@Optional() private localStorageService: LocalStorageService,
+              @Optional() private configService: ConfigOptionsService,
+              @Optional() private constantsService: ConstantsService,
+              @Inject(GENERATOR_9) @Optional() private generatorService: GeneratorService) {
   }
 
   ngOnInit() {
+    this.generateLine();
   }
 
+  onGenerate() {
+    this.generateLine();
+  }
+
+  private generateLine() {
+    this.randomLine = this.generatorService.generate();
+  }
 }

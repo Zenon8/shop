@@ -12,8 +12,8 @@ const CONSTANTS = {App: 'TaskManager', Ver: '1.0'};
   declarations: [ContactUsComponent],
   providers: [
     {provide: ConstantsService, useValue: CONSTANTS},
-
-  ]
+  ],
+  exports: [ContactUsComponent]
 })
 export class CoreModule {
 }

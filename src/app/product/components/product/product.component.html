@@ -1,4 +1,4 @@
-<h2>{{ product.name }}</h2>
+<h2 appChangeColor='red'>{{ product.name }}</h2>
 <div><img [src]='getMainImageUrl()' [height]='getMainImageHeight()'/></div>
 <div ngClass='price'>{{ product.price | currency : 'USD' : 'symbol' : '1.0-0'}}</div>
 <div>{{ product.description }}</div>
