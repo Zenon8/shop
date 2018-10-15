@@ -27,7 +27,7 @@ export class CartPopupComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.addSubscription = this.cartService.cartEvent.subscribe(products => (this.products = products));
+    this.addSubscription = this.cartService.cartEvent.subscribe(arr => (this.products = [...arr]));
     this.visibilitySubscription = this.cartService.visibilityCartPopupEvent.subscribe(s => this.state = s);
   }
 

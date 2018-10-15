@@ -11,7 +11,7 @@ import {ProductComponent} from '../product/product.component';
 })
 export class ProductListComponent implements OnInit, AfterViewInit {
 
-  products: ProductModel[];
+  products: Promise<Array<ProductModel>>;
   @ViewChildren(ProductComponent)
   productChildList: QueryList<ProductComponent>;
 

@@ -1,5 +1,5 @@
 <h1>{{ 'All Products' | uppercase}}</h1>
 <section>
-  <app-product *ngFor="let product of products" [product]="product" (addToCart)="onAddProductToCart($event)">
+  <app-product *ngFor='let product of (products | async)' [product]='product' (addToCart)='onAddProductToCart($event)'>
   </app-product>
 </section>

@@ -11,3 +11,7 @@ app-cart {
   text-align: center;
   width: 170px;
 }
+
+:host >>> .clickable {
+  cursor: pointer;
+}

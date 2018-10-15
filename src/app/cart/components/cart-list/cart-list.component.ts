@@ -14,6 +14,7 @@ export class CartListComponent implements OnInit, OnDestroy {
   totalAmount: number;
   totalQuantity: number;
   cartSubscription: Subscription;
+  sort = {field: 'name', direct: true};
 
   constructor(private cartService: CartService) {
   }
@@ -31,5 +32,10 @@ export class CartListComponent implements OnInit, OnDestroy {
 
   onRemoveItem(product: ProductModel) {
     this.cartService.removeFromCart(product);
+  }
+
+  onClickHeader(event: any) {
+    this.sort = {field: event.target.textContent.toLowerCase(), direct: !this.sort.direct};
+    event.stopPropagation();
   }
 }

@@ -1,13 +1,14 @@
 <div ngClass="cart-list-header">
   <span></span>
-  <span>Name</span>
+  <span ngClass='clickable' (click)='onClickHeader($event)'>Name</span>
   <span>Image</span>
-  <span>Quantity</span>
-  <span>Price</span>
+  <span ngClass='clickable' (click)='onClickHeader($event)'>Quantity</span>
+  <span ngClass='clickable' (click)='onClickHeader($event)'>Price</span>
   <span>Total</span>
   <span></span>
 </div>
-<app-cart-item *ngFor="let product of products; let i=index" [product]="product" [index]="i"
+<app-cart-item *ngFor="let product of products | orderBy : sort.field : sort.direct; let i=index" [product]="product"
+               [index]="i"
                (removeEvent)="onRemoveItem($event)" appHighlight></app-cart-item>
 <div ngClass="cart-list-total">
   <span></span>

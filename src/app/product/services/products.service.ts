@@ -21,14 +21,14 @@ export class ProductsService {
 
     this.productList = [
       new ProductModel('HP 250 G6', 500, [new ImageModel(hpImg, width, height)], 10, Category.NOTEBOOK),
-      new ProductModel('Lenovo IdeaPad 320-15IKB ', 400, [new ImageModel(lenovoImg, width, height)], undefined, Category.NOTEBOOK),
+      new ProductModel('Lenovo IdeaPad 320-15IKB ', 400, [new ImageModel(lenovoImg, width, height)], 5, Category.NOTEBOOK),
       new ProductModel('Samsung Galaxy Note 9', 1250, [new ImageModel(samsungImg, width, height)], 10, Category.PHONE),
       new ProductModel('Asus ZenPad 8.0', 250, [new ImageModel(asusImg, width, height)], 12, Category.TABLET)
     ];
   }
 
-  getProducts(): ProductModel[] {
-    return this.productList;
+  getProducts(): Promise<Array<ProductModel>> {
+    return new Promise((resolve => resolve(this.productList)));
   }
 
   subtract(product: ProductModel) {
