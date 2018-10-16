@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,23 +6,12 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   onActivate($event: any) {
     console.log('Activated event:', $event);
   }
 
   onDeactivate($event: any) {
     console.log('Deactivated event: ', $event);
-  }
-
-  onActivatePopup($event: any) {
-    console.log('Activated popup event: ', $event);
-  }
-
-  onDeactivatePopup($event: any) {
-    console.log('Deactivated popup event: ', $event);
-  }
-
-  prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
 }
