@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {ContactUsComponent} from './components/contact-us/contact-us.component';
-import {ConstantsService} from './services/constants.service';
+import {ContactUsComponent, HomeComponent, PathNotFoundComponent} from './components';
+import {ConstantsService} from './services';
 
 const CONSTANTS = {App: 'TaskManager', Ver: '1.0'};
 
@@ -9,11 +9,10 @@ const CONSTANTS = {App: 'TaskManager', Ver: '1.0'};
   imports: [
     CommonModule
   ],
-  declarations: [ContactUsComponent],
+  declarations: [ContactUsComponent, PathNotFoundComponent, HomeComponent],
   providers: [
     {provide: ConstantsService, useValue: CONSTANTS},
-  ],
-  exports: [ContactUsComponent]
+  ]
 })
 export class CoreModule {
 }

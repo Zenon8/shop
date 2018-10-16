@@ -1,0 +1,33 @@
+:host {
+  background-color: grey;
+  color: white;
+  padding: 5px 0;
+}
+
+:host:hover {
+  background-color: #505050;
+}
+
+:host:first-of-type {
+  border-radius: 0 0 0 6px;
+}
+
+:host:last-of-type {
+  border-radius: 0 0 6px 0;
+}
+
+:host div {
+  display: none;
+}
+
+:host:hover div {
+  display: block;
+}
+
+div {
+  display: block;
+  position: absolute;
+  top: 27px;
+  width: 20%;
+  z-index: 2;
+}

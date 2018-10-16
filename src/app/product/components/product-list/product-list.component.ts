@@ -1,11 +1,10 @@
 import {AfterViewInit, Component, OnInit, QueryList, ViewChildren} from '@angular/core';
-import {ProductsService} from '../../services/products.service';
-import {ProductModel} from '../../models/product.model';
-import {CartService} from '../../../cart/services/cart.service';
+import {ProductModel} from '../../models';
 import {ProductComponent} from '../product/product.component';
+import {ProductsService} from '../../services';
+import {CartService} from '../../../cart/services';
 
 @Component({
-  selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })

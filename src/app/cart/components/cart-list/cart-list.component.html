@@ -9,7 +9,7 @@
 </div>
 <app-cart-item *ngFor="let product of products | orderBy : sort.field : sort.direct; let i=index" [product]="product"
                [index]="i"
-               (removeEvent)="onRemoveItem($event)" appHighlight></app-cart-item>
+               (removeEvent)="onRemoveItem($event)" appHighlight='#eee'></app-cart-item>
 <div ngClass="cart-list-total">
   <span></span>
   <span></span>

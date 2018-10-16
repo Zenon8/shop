@@ -1,0 +1,9 @@
+:host {
+  background-color: #505050;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  color: white;
+  display: list-item;
+  padding: 3px 7px;
+  z-index: 1;
+}

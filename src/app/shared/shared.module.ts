@@ -1,8 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {HighlightDirective} from './directives/highlight.directive';
-import {ChangeColorDirective} from './directives/change-color.directive';
-import {OrderByPipePipe} from './pipes/order-by-pipe.pipe';
+import {ChangeColorDirective, HighlightDirective} from './directives';
+import {OrderByPipePipe} from './pipes';
 
 @NgModule({
   imports: [

@@ -1,5 +1,4 @@
-<div style="text-align:center">
-  <app-cart></app-cart>
-  <app-product-list></app-product-list>
-  <app-contact-us></app-contact-us>
-</div>
+<app-menu></app-menu>
+<app-cart></app-cart>
+<router-outlet (activate)='onActivate($event)' (deactivate)='onDeactivate($event)'></router-outlet>
+<router-outlet name='popup'></router-outlet>

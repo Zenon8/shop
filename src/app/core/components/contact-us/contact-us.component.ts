@@ -1,11 +1,14 @@
 import {Component, Inject, OnInit, Optional} from '@angular/core';
-import {LocalStorageService} from '../../services/local-storage.service';
-import {ConfigOptionsService} from '../../services/config-options.service';
-import {ConstantsService} from '../../services/constants.service';
-import {GENERATOR_9, GeneratorService, generatorServiceFactory} from '../../services/generator.service';
+import {
+  ConfigOptionsService,
+  ConstantsService,
+  GENERATOR_9,
+  GeneratorService,
+  generatorServiceFactory,
+  LocalStorageService
+} from '../../services';
 
 @Component({
-  selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
   styleUrls: ['./contact-us.component.css'],
   providers: [

@@ -1,0 +1,11 @@
+:host {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+  min-width: 200px;
+  width: 60%;
+}
+
+.active, :host >>> .active {
+  background-color: #057727;
+}
