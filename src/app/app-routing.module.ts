@@ -22,7 +22,7 @@ const routes: Routes = [
     component: CartPopupComponent
   },
   {
-    path: 'contact-us',
+    path: 'contacts',
     component: ContactUsComponent
   },
   {
