@@ -1,13 +1,13 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-import {ProductCardComponent, ProductListComponent} from './product/components';
-import {CartPopupComponent} from './cart/components';
-import {ContactUsComponent, HomeComponent, PathNotFoundComponent} from './core/components';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { ProductCardComponent, ProductListComponent } from './product/components';
+import { CartPopupComponent } from './cart/components';
+import { ContactUsComponent, HomeComponent, PathNotFoundComponent } from './core/components';
 
 const routes: Routes = [
   {
     path: 'home',
-    component: HomeComponent,
+    component: HomeComponent
   },
   {
     path: 'products/:category',
@@ -19,7 +19,8 @@ const routes: Routes = [
   },
   {
     path: 'cart',
-    component: CartPopupComponent
+    component: CartPopupComponent,
+    outlet: 'popup'
   },
   {
     path: 'contacts',
@@ -40,5 +41,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}

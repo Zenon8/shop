@@ -1,6 +1,7 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {CartService} from '../../services/cart.service';
-import {Subscription} from 'rxjs';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -8,13 +9,11 @@ import {Subscription} from 'rxjs';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit, OnDestroy {
-
   totalAmount: number;
   totalQuantity: number;
   addSubscription: Subscription;
 
-  constructor(private cartService: CartService) {
-  }
+  constructor(private cartService: CartService) {}
 
   ngOnInit() {
     this.addSubscription = this.cartService.cartEvent.subscribe(() => {
@@ -33,8 +32,8 @@ export class CartComponent implements OnInit, OnDestroy {
 
   applyStyle() {
     return {
-      'color': this.totalQuantity > 0 ? 'darkgreen' : '#aaa',
-      'cursor': this.totalQuantity > 0 ? 'pointer' : 'unset'
+      color: this.totalQuantity > 0 ? 'darkgreen' : '#aaa',
+      cursor: this.totalQuantity > 0 ? 'pointer' : 'unset'
     };
   }
 }

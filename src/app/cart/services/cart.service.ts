@@ -1,35 +1,36 @@
-import {ProductModel} from '../../product/models/product.model';
-import {BehaviorSubject, Subject} from 'rxjs';
-import {Injectable} from '@angular/core';
+import { Router } from '@angular/router';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject, Subject } from 'rxjs';
+import { ProductModel } from '../../product/models/product.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
-
   cart: Array<ProductModel> = [];
   cartEvent: Subject<ProductModel[]> = new BehaviorSubject(this.cart);
   removeEvent: Subject<ProductModel> = new Subject();
   state: 'shown' | 'hidden' = 'hidden';
   visibilityCartPopupEvent: Subject<'shown' | 'hidden'> = new BehaviorSubject(this.state);
 
-  constructor() {
-  }
+  constructor(private router: Router) {}
 
   openCartPopup() {
     if (this.cart.length > 0) {
-      this.visibilityCartPopupEvent.next('shown');
+      this.router.navigate([{ outlets: { popup: ['cart'] } }]);
+      // this.visibilityCartPopupEvent.next('shown');
     }
   }
 
   closeCartPopup() {
-    this.visibilityCartPopupEvent.next('hidden');
+    // this.visibilityCartPopupEvent.next('hidden');
+    this.router.navigate([{ outlets: { popup: null } }]);
   }
 
   addToCard(product: ProductModel) {
     const productInCart = this.cart.find(item => product.name === item.name);
     if (productInCart === undefined) {
-      const orderedProduct = {...product, ...{quantity: 1}};
+      const orderedProduct = { ...product, ...{ quantity: 1 } };
       this.cart.push(orderedProduct);
     } else {
       productInCart.quantity++;
@@ -52,14 +53,10 @@ export class CartService {
   }
 
   getTotalAmount(): number {
-    return this.cart
-      .map(p => p.price * p.quantity)
-      .reduce((acc, curr) => acc + curr, 0);
+    return this.cart.map(p => p.price * p.quantity).reduce((acc, curr) => acc + curr, 0);
   }
 
   getTotalQuantity(): number {
-    return this.cart
-      .map(p => p.quantity)
-      .reduce((acc, curr) => acc + curr, 0);
+    return this.cart.map(p => p.quantity).reduce((acc, curr) => acc + curr, 0);
   }
 }
