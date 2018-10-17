@@ -1,5 +1,5 @@
-<h2>{{product.name}}</h2>
-<img src=''/>
-<div>{{product.price}}</div>
-<div>{{product.description}}</div>
+<h2>{{ (product$ | async).name }}</h2>
+<img [src]='(product$ | async).images[0].url' [height]='getImageHeight()'/>
+<div>{{ (product$ | async).price | currency : 'USD' : 'symbol' : '1.0-0' }}</div>
+<div>{{ (product$ | async).description }}</div>
 <div>comments</div>

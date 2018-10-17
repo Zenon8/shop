@@ -1,7 +1,13 @@
-<h2 appChangeColor='red'>{{ product.name }}</h2>
+<h2 ngClass='clickable' appChangeColor='red' [routerLink]="['/product', product.id]">
+ {{ product.name }}
+</h2>
+
 <div><img [src]='getMainImageUrl()' [height]='getMainImageHeight()'/></div>
+
 <div ngClass='price'>{{ product.price | currency : 'USD' : 'symbol' : '1.0-0'}}</div>
+
 <div>{{ product.description }}</div>
-<button (click)="onAddToCart()" [disabled]="isDisabled()">
-  <i class="fa fa-cart-plus fa-lg"></i> {{'add to cart' | uppercase}}
+
+<button (click)='onAddToCart()' [disabled]='isDisabled()'>
+  <i class='fa fa-cart-plus fa-lg'></i> {{'add to cart' | uppercase}}
 </button>

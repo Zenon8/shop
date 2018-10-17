@@ -7,16 +7,17 @@ export class ConfigOptionsService {
   private config: Map<String, Object> = new Map();
 
   constructor() {
-    this.config.set('id', '111');
-    this.config.set('login', 'zenon');
-    this.config.set('email', 'admin@admin.com');
+    this.set('id', '111');
+    this.set('login', 'zenon');
+    this.set('email', 'admin@admin.com');
+    this.set('image_size_product_card', 400);
   }
 
   get(key: string) {
     return this.config.get(key);
   }
 
-  set(key: string, value: object) {
+  set(key: string, value: string | number) {
     this.config.set(key, value);
   }
 }
