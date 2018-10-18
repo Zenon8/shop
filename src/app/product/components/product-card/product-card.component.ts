@@ -1,9 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, ParamMap, Router} from '@angular/router';
-import {Observable} from 'rxjs';
-import {switchMap} from 'rxjs/operators';
-import {ProductsService} from '../../services/products.service';
-import {ProductModel} from '../../models/product.model';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
+import { ProductsService } from '../../services/products.service';
+import { ProductModel } from '../../models/product.model';
 
 @Component({
   selector: 'app-product-card',
@@ -13,10 +13,11 @@ import {ProductModel} from '../../models/product.model';
 export class ProductCardComponent implements OnInit {
   product$: Observable<ProductModel>;
 
-  constructor(private route: ActivatedRoute,
-              private router: Router,
-              private service: ProductsService) {
-  }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private service: ProductsService
+  ) {}
 
   ngOnInit() {
     this.product$ = this.route.paramMap.pipe(
@@ -25,6 +26,6 @@ export class ProductCardComponent implements OnInit {
   }
 
   getImageHeight() {
-    this.service.getImageSize(this);
+    return this.service.getImageSize(this);
   }
 }
