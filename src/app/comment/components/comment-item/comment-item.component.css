@@ -1,0 +1,20 @@
+:host {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+}
+
+.author {
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: left;
+}
+
+.created {
+  text-align: right;
+}
+
+.text {
+  grid-column: 1/ span 2;
+  text-align: justify;
+}
