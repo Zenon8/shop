@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { ProductModel } from '../models/product.model';
 import { Category } from '../../core/category.enum';
 import { ImageModel } from '../../core/image.model';
 import { ConfigOptionsService } from '../../core/services';
+import { ProductModel } from '../models/product.model';
 
 @Injectable({
   providedIn: 'root'
@@ -72,7 +72,6 @@ export class ProductsService {
   }
 
   getProductById(id: number): Observable<ProductModel> {
-    console.log('Id: ', id);
     return of(this.productList.find(pr => pr.id === id));
   }
 

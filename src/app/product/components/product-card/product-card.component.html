@@ -1,14 +1,14 @@
 <h2>{{ (product$ | async).name }}</h2>
 
-<img [src]='(product$ | async).images[0].url' [height]='getImageHeight()' />
-
-<div id='price'>{{ (product$ | async).price | currency : 'USD' : 'symbol' : '1.0-0' }}</div>
+<img [src]='(product$ | async).images[0].url'/>
 
 <section id='desc'>
   <h4>{{ 'Description' | uppercase }}</h4>
   Product description will be present here {{ (product$ | async).description }}
 </section>
 
-<section id='comments'>
-  <h4>{{ 'comments' | uppercase }}</h4>
-</section>
+<section id='price'>{{ (product$ | async).price | currency : 'USD' : 'symbol' : '1.0-0' }}</section>
+
+<app-comment-list [productId]='(product$ | async).id'></app-comment-list>
+
+

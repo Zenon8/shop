@@ -1,18 +1,19 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import {Router} from '@angular/router';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Router } from '@angular/router';
 
-import {AngularFontAwesomeModule} from 'angular-font-awesome';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { AppRoutingModule } from './app-routing.module';
 
-import {AppComponent} from './app.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {CartModule} from './cart/cart.module';
-import {CoreModule} from './core/core.module';
-import {OrderModule} from './order/order.module';
-import {ProductModule} from './product/product.module';
-import {SharedModule} from './shared/shared.module';
-import {AppRoutingModule} from './app-routing.module';
-import {MenuModule} from './menu/menu.module';
+import { AppComponent } from './app.component';
+import { CartModule } from './cart/cart.module';
+import { CommentModule } from './comment/comment.module';
+import { CoreModule } from './core/core.module';
+import { MenuModule } from './menu/menu.module';
+import { OrderModule } from './order/order.module';
+import { ProductModule } from './product/product.module';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import {MenuModule} from './menu/menu.module';
     ProductModule,
     SharedModule,
     AppRoutingModule,
-    MenuModule
+    MenuModule,
+    CommentModule
   ],
   providers: [],
   bootstrap: [
@@ -38,6 +40,6 @@ import {MenuModule} from './menu/menu.module';
 })
 export class AppModule {
   constructor(router: Router) {
-    console.log(`Routes: ${JSON.stringify(router.config, undefined, 2)}`);
+    // console.log(`Routes: ${JSON.stringify(router.config, undefined, 2)}`);
   }
 }
