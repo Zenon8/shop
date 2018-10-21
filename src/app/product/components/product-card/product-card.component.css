@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 10px repeat(12, 1fr) 10px;
   grid-template-rows: repeat(20, 1fr);
+  grid-gap: 10px;
 }
 
 h2 {
@@ -10,8 +11,10 @@ h2 {
 
 img {
   grid-column: 2 / span 5;
-  grid-row: 3 / span 4;
-  width: 100%;
+  grid-row: 3 / span 6;
+  justify-self: center;
+  max-height: 60vh;
+  max-width: 100%;
 }
 
 #price {
@@ -25,10 +28,11 @@ img {
 
 #desc {
   grid-column: 7 / span 6;
-  grid-row: 2 / span 5;
+  grid-row: 2 / span 7;
+  text-align: justify;
 }
 
 app-comment-list {
   grid-column: 3 / span 10;
-  grid-row: 7 / span 6;
+  grid-row: 9 / span 12;
 }

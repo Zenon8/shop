@@ -1,8 +1,8 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-import {ProductCardComponent, ProductListComponent} from './product/components';
-import {CartPopupComponent} from './cart/components';
-import {ContactUsComponent, HomeComponent, PathNotFoundComponent} from './core/components';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { CartPopupComponent } from './cart/components';
+import { ContactUsComponent, HomeComponent, PathNotFoundComponent } from './core/components';
+import { ProductCardComponent, ProductListComponent } from './product/components';
 
 const routes: Routes = [
   {

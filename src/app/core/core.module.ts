@@ -1,14 +1,14 @@
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { ContactUsComponent, HomeComponent, PathNotFoundComponent } from './components';
-import { HorizontalTabMenuComponent } from './components/horizontal-tab-menu/horizontal-tab-menu.component';
+import { ContactUsComponent, HomeComponent, HorizontalTabMenuComponent, PathNotFoundComponent } from './components';
 import { ConstantsService } from './services';
 
 const CONSTANTS = {App: 'TaskManager', Ver: '1.0'};
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule, HttpClientModule
   ],
   declarations: [ContactUsComponent, PathNotFoundComponent, HomeComponent, HorizontalTabMenuComponent],
   providers: [

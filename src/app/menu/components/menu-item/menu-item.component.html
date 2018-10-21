@@ -1,7 +1,7 @@
 <section *ngIf='item.children'>
   <div>
     <app-sub-menu-item appHighlight='#707070' ngClass='clickable' *ngFor='let item of item.children'
-                       [item]='item' routerLink='{{item.link}}' routerLinkActive='active'>>
+                       [item]='item' routerLink='{{ item.link }}' routerLinkActive='active'>>
     </app-sub-menu-item>
   </div>
 </section>

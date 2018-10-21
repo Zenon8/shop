@@ -1,14 +1,18 @@
 :host {
-  grid-row: 1 / span 3;
+  /*grid-row: 1 / span 3;*/
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin: 4vh 4vw 4vh;
+}
+
+h2 {
+  grid-column: 1 / span 3;
 }
 
 app-product {
-    background-color: rgb(231, 246, 247);
-    border: 1px solid #456783;
-    border-radius: 6px;
-    display: block;
-    float: left;
-    margin: 5px 10px;
-    padding: 7px 10px;
-    width: 300px;
+  background-color: rgb(231, 246, 247);
+  border: 1px solid #456783;
+  border-radius: 0.5vw;
+  padding: 0.7vh 0.8vw;
 }

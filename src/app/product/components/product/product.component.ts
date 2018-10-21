@@ -1,5 +1,5 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {ProductModel} from '../../models';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ProductModel } from '../../models';
 
 @Component({
   selector: 'app-product',
@@ -25,7 +25,7 @@ export class ProductComponent implements OnInit {
   }
 
   getMainImageHeight(): number {
-    return this.product.images[0].height;
+    return 130;
   }
 
   isDisabled(): boolean {

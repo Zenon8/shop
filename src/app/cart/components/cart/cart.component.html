@@ -1,6 +1,6 @@
 <i [ngStyle]='applyStyle()' (click)='onClick()' class="fa fa-shopping-basket fa-4x" aria-hidden="true"></i>
 <div id='order-info' *ngIf=' totalQuantity > 0'>
-  <div>Ordered items: {{ totalQuantity }}</div>
-  <div>Total amount: {{ totalAmount | currency : 'USD' : 'symbol' : '1.0-0' }}</div>
+  <div>Ordered: {{ totalQuantity }}</div>
+  <div>Total: {{ totalAmount | currency : 'USD' : 'symbol' : '1.0-0' }}</div>
 </div>
 <app-cart-popup></app-cart-popup>

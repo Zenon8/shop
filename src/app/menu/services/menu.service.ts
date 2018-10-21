@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {MenuItemModel} from '../models';
+import { Injectable } from '@angular/core';
+import { MenuItemModel } from '../models';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class MenuService {
     this.menu = [
       new MenuItemModel('Home', '/home'),
       new MenuItemModel('Products', '/products/all', [
-        new MenuItemModel('Laptop', '/products/laptop'),
+        new MenuItemModel('Notebook', '/products/notebook'),
         new MenuItemModel('Phone', '/products/phone'),
         new MenuItemModel('Tablet', '/products/tablet')
       ]),

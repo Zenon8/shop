@@ -1,5 +1,5 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {ProductModel} from '../../../product/models/product.model';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ProductModel } from '../../../product/models';
 
 @Component({
   selector: 'app-cart-item',
@@ -20,8 +20,8 @@ export class CartItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  getImageHeight(product: ProductModel): number {
-    return product.images[0].height - 70;
+  getImageHeight(): number {
+    return 60;
   }
 
   onClickRemove(product: ProductModel) {

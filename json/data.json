@@ -1,0 +1,148 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "HP 1NW56UT Laptop 250 G6",
+      "price": 484,
+      "images": [
+        {
+          "url": "https://i2.rozetka.ua/goods/4047041/copy_hp_250_g6_1xn74ea_5ace39c164ca6_images_4047041832.jpg"
+        }
+      ],
+      "quantity": 10,
+      "category": 2,
+      "description": "SBUY 250 G6, Intel Core i5-7200U (2.5GHz, up to 3.1GHz, 3MB Cache),4GB 2133 1D, 500GB 7200 2.5, 15.6 LED HD SVA AG, UMA: HD 620, DVD/CD-RW Combo, 802.11 a/b/g/n/ac (1X1); BT 4.2 BT, TPM 2.0, Slot Lock, WDR HD, Win10Pro 64, 4-Cell 41Wh, 1/1/0. \nSuppress background noise including keyboard clicks with HP Noise Cancellation Software. / Back-up and quickly move data to and from your HP 250 with the fast and convenient SD card slot. / The firmware Trusted Platform Module (TPM) provides hardware-based encryption keys to help secure your data, e-mail, and user credentials. / Get fast connections with Gigabit LAN and WLAN 802.11ac/Bluetooth 4.2 combo."
+    },
+    {
+      "id": 2,
+      "name": "Lenovo IdeaPad 320-15IKB",
+      "price": 400,
+      "images": [
+        {
+          "url": "https://i2.rozetka.ua/goods/2093004/copy_lenovo_80xl02rdra_596de165a5083_images_2093004886.jpg"
+        }
+      ],
+      "quantity": 5,
+      "category": 2,
+      "description": "Intel 8th Gen Core i5-8250U Quad Core processor 1.6Ghz 8 GB DDR4 SDRAM memory 1TB 5400RPM SATA hard drive 15.6\" HD 1366x768 Anti-Glare display Intel Integrated HD 620 Graphics 802.11ac Wireless and Bluetooth 4.1 Keyboard with numeric keypad 4-in-1 digital media reader Webcam with integrated microphone Windows 10 Home"
+    },
+    {
+      "id": 3,
+      "name": "Samsung Galaxy Note 9",
+      "price": 1250,
+      "images": [
+        {
+          "url": "https://i2.rozetka.ua/goods/6520779/samsung_sm_n960fzkdsek_images_6520779374.jpg"
+        }
+      ],
+      "quantity": 10,
+      "category": 3,
+      "description": "Latest Samsung’s development - flagship Note9. This phone is a beast. Sports Snapdragon 835 or Exynos 9810 (depending on the region), 128GB of storage + microSDHC slot (up to 512GB memory card). With 6GB of RAM, your apps will stay longer in the memory, so you don’t need to wait for them to refresh when you switch between the apps. New redesigned and improved stylus. New camera set up: 12MP Dual Camera with variable aperture on the back + 8MP front-facing camera. The phone comes pre-loaded with Android 8.1 Oreo OS with the latest Samsung Experience Skin. With 4000mAh of battery, you can easily get through an intense business day. Plus, you can always drop your Note9 on a wireless charger (sold separately). Fast charging and adaptive fast charging is supported. Iris, Facial, and fingerprint recognition. IP68. We will start shipping on August 17, 2018. Reserve your copy soon!"
+    },
+    {
+      "id": 4,
+      "name": "Asus ZenPad 8.0",
+      "price": 250,
+      "images": [
+        {
+          "url": "https://i1.rozetka.ua/goods/4386368/asus_z380knL_6a080a_images_4386368568.jpg"
+        }
+      ],
+      "quantity": 12,
+      "category": 4,
+      "description": "8\" IPS Display (2048 x 1536) with ASUS TruVivid technology for better visual experience \nIntel Atom Z3530 Quad-Core, 64bit, 1.3GHz \n2GB RAM, 32GB Onboard Storage \n5M/2M Dual Camera; 1 x microSD Card slot, support up to 128GB SDXC \nAndroid 5.0 Lollipop \nUpdate the firmware to V5.5.2 or higher"
+    },
+    {
+      "id": 5,
+      "name": "Samsung Galaxy S8 LTE 64GB",
+      "price": 493,
+      "images": [
+        {
+          "url": "https://www.mobileshop.eu/phone-pictures/large/6852-17015samsung-galaxy-s8-black-front.jpg"
+        }
+      ],
+      "quantity": 40,
+      "category": 3,
+      "description": "Camera: 12+12 MP Dual rear Camera with Autofocus, 2x Optical zoom | 8 MP front camera with Image recording, Touch focus and Face smile detection \nDisplay: 16.05 centimeters (6.3-inch) QHD+ capacitive touchscreen display with 1440x2960 pixels, 521 ppi pixel density and 18.5:9 aspect ratio \nMemory, Storage & SIM: 6GB RAM | 64GB storage expandable up to 256GB | Dual SIM with dual standby (4G+4G) \nOperating System and Processor: Exyn operating system 8895 10nm octa core processor 2.3GHz + 1.7GHz. Mali-G71 MP20 GPU \nBattery: 3300 mAH lithium ion battery providing talk-time of 22 hours"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "product_id": 3,
+      "author": "Vlad Zozulya",
+      "created": "06-08-2018",
+      "text": "It feels good to fit in one handSlightly dissatisfied with the main body of camera application stored from the beginningIf fingerprint authentication is the thumb, it is best to hit it vertically but hitting your finger sideways will not respondI will not react if the part to be hit is not big ...The speaker is not stereo, but it seems to be coming from the lower speaker and the speaker of the receiver, but since the volume of the receiver is small, only the lower part can be heardFace authentication is fast"
+    },
+    {
+      "id": 2,
+      "product_id": 1,
+      "author": "Michael Fox",
+      "created": "02-11-2018",
+      "text": "Is it suitable for rendering FullHD video?"
+    },
+    {
+      "id": 3,
+      "product_id": 1,
+      "author": "John Black",
+      "created": "09-21-2018",
+      "text": "Very good laptop. I used it more than 1 year"
+    },
+    {
+      "id": 4,
+      "product_id": 5,
+      "author": "Karan Rei",
+      "created": "06-28-2018",
+      "text": "Got it on prime day. Exchanged my old one plus 3T for it and it got it for a hell of a price. \nPros: Great looks Great phone \nSuperb Camera, Superb Screen. \nCons: Battery life. It wont last entire day."
+    },
+    {
+      "id": 5,
+      "product_id": 5,
+      "author": "Arthur Loyd",
+      "created": "07-02-2018",
+      "text": "I could grab this phone on Amazon Prime day on which special additional discount of Rs. 10000/- on exchange was given. Additionally I got HDFC credit card cashback of Rs. 4000/-. \nPhone is excellent in all respect except battery life. I could run battery for one full day only when power saver was kept on continuously. Then display is changed from QHD + to HD+, always on display is not running etc.. So you've to compromise."
+    },
+    {
+      "id": 6,
+      "product_id": 4,
+      "author": "Leonid Zuravlenko",
+      "created": "06-11-2018",
+      "text": "I opted for the budget friendly 2gb/32gb model because I didn't think the additional RAM would benefit me and I just don't need 64gb storage. I don't take pictures with a tablet so the 5mp/8mp cameras of the Z580CA wasn't attractive either. I wasn't aware until after I purchased the Z580C that the Z580CA model's CPU is 2.3ghz compared the 2gb/32gb model's 1.3ghz. That additional processor power might've been enough to push me into that model had I not already received, setup, and enjoyed the Z580C so far."
+    },
+    {
+      "id": 7,
+      "product_id": 1,
+      "author": "Susanna B.",
+      "created": "03-08-2018",
+      "text": "HP is a very reliable computer. that is why I am a return purchaser. \nThis is a great computer.. The keyboard has a light touch for typing."
+    },
+    {
+      "id": 8,
+      "product_id": 1,
+      "author": "Ivan Vasilenko",
+      "created": "10-11-2018",
+      "text": "It can but not very well. for games look for something with a dedicated video card."
+    },
+    {
+      "id": 9,
+      "product_id": 3,
+      "author": "Lena Dudar",
+      "created": "10-10-2018",
+      "text": "I have been hesitant about buying the Note 9, but after having it in my hands I am just in awe... it is truly an amazing and magical mix of design technology and function. \nBTW in this international version Samsung Pay works perfectly in US (tested with Bank of America debit cards on TMobile). \nThe dual sim is also a fantastic feature, I travel between US and Europe and I don't need anymore to fidget with a microsim while walking down the isle of the plane to disembark 😁. To be noted as well that both sim can be active at the same time if desired. \nFinally the vendor delivered the phone quicker then origilly scheduled. \nCan't be happier"
+    },
+    {
+      "id": 10,
+      "product_id": 3,
+      "author": "Marina Ivanchuk",
+      "created": "10-04-2018",
+      "text": "Just wanted to say that the vendor shipped the phone quickly and their service was excellent! My issue was mostly about the hardware. Not sure if mine was defective but I would always get delayed incoming calls for some reason. My signal in the Los Angeles area was not too good. \nNote that you won't be able to use it's built in WiFi calling and Video calling. This is because those are carrier specific services. However, you can always use Google Duo. \nSome bands are also not available in the US. Make sure you inquire about that before purchasing this phone."
+    },
+    {
+      "id": 11,
+      "product_id": 3,
+      "author": "Ronald Kitch",
+      "created": "10-05-2018",
+      "text": "The translate option on the pen is entirely way better than note 8. \nWith almost zero wait, it translates word by word or phrase by phrase. \nNote 8 sort of does this with kindle, but way slower. \nIs amazing real time translations just by hovering the pen anywhere on the phone. \nThe picture snapping thing i thought so what, but is actually extremely cool. \nFree of having to tap or shout smile at the phone. Picture quality is noticeable better, richness of, say, leaves on the tree, better than Note 8. \nBattery is main reason for purchase and so far, is still adjusting, but does not seem to be lasting any longer than Note 8. \nThe connectivity is 100% better than the 8, especially by the water where i could not get reception hardly at all. \nIs better than I'd hoped for. \nI had not been aware enough that the charger with the international phone \nis useless here in the states."
+    }
+  ]
+}

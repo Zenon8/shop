@@ -17,11 +17,7 @@ export class CommentListComponent implements OnInit {
 
   ngOnInit() {
     this.commentService.getCommentsByProductId(this.productId)
-      .subscribe(comm => {
-        console.log('Comment', comm);
-        this.comments.push(comm);
-      });
-    console.log('All comments: ', this.comments);
+      .subscribe(comments => this.comments = [...comments]);
   }
 
 }

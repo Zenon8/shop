@@ -1,5 +1,5 @@
-import {ImageModel} from '../../core/image.model';
-import {Category} from '../../core/category.enum';
+import { Category } from './category.enum';
+import { ImageModel } from './image.model';
 
 export class ProductModel {
 
