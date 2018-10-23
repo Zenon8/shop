@@ -5,10 +5,11 @@ import { MenuItemModel } from '../models';
   providedIn: 'root'
 })
 export class MenuService {
-  menu: Array<MenuItemModel>;
+  mainMenu: MenuItemModel[];
+  adminMenu: MenuItemModel[];
 
   constructor() {
-    this.menu = [
+    this.mainMenu = [
       new MenuItemModel('Home', '/home'),
       new MenuItemModel('Products', '/products/all', [
         new MenuItemModel('Notebook', '/products/notebook'),
@@ -17,9 +18,20 @@ export class MenuService {
       ]),
       new MenuItemModel('Contacts', '/contacts')
     ];
+
+    this.adminMenu = [
+      new MenuItemModel('Dashboard', '/admin'),
+      new MenuItemModel('Orders', '/admin/orders'),
+      new MenuItemModel('Products', '/admin/products')
+    ];
   }
 
-  getMenu(): Array<MenuItemModel> {
-    return this.menu;
+  getMenu(menuType: string): Array<MenuItemModel> {
+    if (menuType === 'main') {
+      return this.mainMenu;
+    }
+    if (menuType === 'admin') {
+      return this.adminMenu;
+    }
   }
 }

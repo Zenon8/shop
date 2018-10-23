@@ -27,7 +27,7 @@
 div {
   display: block;
   position: absolute;
-  top: 27px;
+  top: 3.5vw;
   width: 20%;
   z-index: 2;
 }

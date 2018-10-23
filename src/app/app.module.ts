@@ -29,6 +29,7 @@ export function appInit(productService: ProductsService) {
     BrowserModule,
     BrowserAnimationsModule,
     AngularFontAwesomeModule,
+    AdminModule,
     CartModule,
     CoreModule,
     OrderModule,
@@ -37,7 +38,6 @@ export function appInit(productService: ProductsService) {
     AppRoutingModule,
     MenuModule,
     CommentModule,
-    AdminModule
   ],
   providers: [
     {provide: APP_INITIALIZER, useFactory: appInit, deps: [ProductsService], multi: true}
@@ -49,6 +49,6 @@ export function appInit(productService: ProductsService) {
 export class AppModule {
   constructor(router: Router, @Inject(APP_INITIALIZER) @Optional() appInits: (() => any)[]) {
     // appInits.forEach(el => console.log(el));
-    // console.log(`Routes: ${JSON.stringify(router.config, undefined, 2)}`);
+    console.log(`Routes: ${JSON.stringify(router.config, undefined, 2)}`);
   }
 }
