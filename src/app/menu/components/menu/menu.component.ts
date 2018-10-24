@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { MenuItemModel } from '../../models';
 import { MenuService } from '../../services';
 
@@ -9,11 +8,13 @@ import { MenuService } from '../../services';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  items: Observable<MenuItemModel[]>;
+  @Input()
+  type: 'shop' | 'admin';
+  items: MenuItemModel[];
 
   constructor(private menuService: MenuService) {}
 
   ngOnInit() {
-    this.items = this.menuService.getMenu();
+    this.items = this.menuService.getMenu(this.type);
   }
 }

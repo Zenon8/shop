@@ -1,4 +1,4 @@
-import {Component, Inject, OnInit, Optional} from '@angular/core';
+import { Component, Inject, OnInit, Optional } from '@angular/core';
 import {
   ConfigOptionsService,
   ConstantsService,
@@ -7,6 +7,8 @@ import {
   generatorServiceFactory,
   LocalStorageService
 } from '../../services';
+
+export const numberForGenerator = () => 9;
 
 @Component({
   templateUrl: './contact-us.component.html',

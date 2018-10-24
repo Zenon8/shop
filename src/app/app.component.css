@@ -5,12 +5,3 @@
 :host >>> .clickable {
   cursor: pointer;
 }
-
-app-cart {
-  display: inline-block;
-  position: absolute;
-  top: 2vh;
-  right: 2vw;
-  text-align: center;
-  min-width: 128px;
-}

@@ -8,14 +8,8 @@ import { AdminModule } from './admin/admin.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { CartModule } from './cart/cart.module';
-import { CommentModule } from './comment/comment.module';
-import { CoreModule } from './core/core.module';
-import { MenuModule } from './menu/menu.module';
-import { OrderModule } from './order/order.module';
-import { ProductModule } from './product/product.module';
 import { ProductsService } from './product/services';
-import { SharedModule } from './shared/shared.module';
+import { ShopModule } from './shop/shop.module';
 
 export function appInit(productService: ProductsService) {
   return () => productService.initializeProductList();
@@ -29,15 +23,9 @@ export function appInit(productService: ProductsService) {
     BrowserModule,
     BrowserAnimationsModule,
     AngularFontAwesomeModule,
+    ShopModule,
     AdminModule,
-    CartModule,
-    CoreModule,
-    OrderModule,
-    ProductModule,
-    SharedModule,
     AppRoutingModule,
-    MenuModule,
-    CommentModule,
   ],
   providers: [
     {provide: APP_INITIALIZER, useFactory: appInit, deps: [ProductsService], multi: true}

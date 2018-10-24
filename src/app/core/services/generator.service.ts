@@ -1,4 +1,4 @@
-import {Injectable, InjectionToken} from '@angular/core';
+import { Injectable, InjectionToken } from '@angular/core';
 
 export const generatorServiceFactory = (n: number) => () => new GeneratorService(n);
 
@@ -11,7 +11,7 @@ export class GeneratorService {
 
   private chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'.split('');
 
-  constructor(private n: number) {
+  constructor(private n: Number) {
   }
 
   generate(): string {
