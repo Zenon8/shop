@@ -23,8 +23,8 @@ export function appInit(productService: ProductsService) {
     BrowserModule,
     BrowserAnimationsModule,
     AngularFontAwesomeModule,
-    ShopModule,
     AdminModule,
+    ShopModule,
     AppRoutingModule,
   ],
   providers: [

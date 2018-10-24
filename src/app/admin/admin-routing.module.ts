@@ -8,20 +8,20 @@ const routes: Routes = [
     component: AdminComponent,
     children: [
       {
-        path: 'admin/dashboard',
+        path: 'dashboard',
         component: AdminDashboardComponent
       },
       {
-        path: 'admin/orders',
+        path: 'orders',
         component: ManageOrderComponent
       },
       {
-        path: 'admin/products',
+        path: 'products',
         component: ManageProductComponent
       },
       {
         path: '',
-        redirectTo: '/admin/dashboard',
+        redirectTo: 'dashboard',
         pathMatch: 'full'
       }
     ]

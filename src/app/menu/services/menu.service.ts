@@ -20,7 +20,7 @@ export class MenuService {
     ];
 
     this.adminMenu = [
-      new MenuItemModel('Dashboard', '/admin'),
+      new MenuItemModel('Dashboard', '/admin/dashboard'),
       new MenuItemModel('Orders', '/admin/orders'),
       new MenuItemModel('Products', '/admin/products')
     ];
