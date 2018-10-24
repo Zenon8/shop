@@ -8,11 +8,11 @@ const routes: Routes = [
     component: AdminDashboardComponent,
     children: [
       {
-        path: 'order',
+        path: 'orders',
         component: ManageOrderComponent
       },
       {
-        path: 'product',
+        path: 'products',
         component: ManageProductComponent
       }
     ]

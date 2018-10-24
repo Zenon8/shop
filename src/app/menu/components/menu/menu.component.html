@@ -1,2 +1,2 @@
-<app-menu-item ngClass='clickable' *ngFor='let item of items' [item]='item' routerLink='{{item.link}}'
-               routerLinkActive='active'></app-menu-item>
+<app-menu-item ngClass='clickable' *ngFor='let item of (items | async)' [item]='item' routerLink='{{item.link}}'
+  routerLinkActive='active'></app-menu-item>

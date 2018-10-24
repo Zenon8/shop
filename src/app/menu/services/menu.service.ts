@@ -1,15 +1,18 @@
 import { Injectable } from '@angular/core';
+import { Observable, of, Subject, BehaviorSubject } from 'rxjs';
 import { MenuItemModel } from '../models';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MenuService {
-  mainMenu: MenuItemModel[];
+  shopMenu: MenuItemModel[];
   adminMenu: MenuItemModel[];
+  private activeMenu: MenuItemModel[];
+  private activeMenu$ = new BehaviorSubject<MenuItemModel[]>(1);
 
   constructor() {
-    this.mainMenu = [
+    this.shopMenu = [
       new MenuItemModel('Home', '/home'),
       new MenuItemModel('Products', '/products/all', [
         new MenuItemModel('Notebook', '/products/notebook'),
@@ -24,14 +27,20 @@ export class MenuService {
       new MenuItemModel('Orders', '/admin/orders'),
       new MenuItemModel('Products', '/admin/products')
     ];
+
+    this.activeMenu$.next([...this.shopMenu]);
   }
 
-  getMenu(menuType: string): Array<MenuItemModel> {
-    if (menuType === 'main') {
-      return this.mainMenu;
-    }
+  getMenu(): Observable<MenuItemModel[]> {
+    console.log('Active menu', this.activeMenu);
+    return this.activeMenu$;
+  }
+
+  activateMenu(menuType: 'admin' | 'shop'): void {
     if (menuType === 'admin') {
-      return this.adminMenu;
+      this.activeMenu$.next([...this.adminMenu]);
+    } else {
+      this.activeMenu$.next([...this.shopMenu]);
     }
   }
 }
